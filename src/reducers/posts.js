@@ -12,7 +12,6 @@ export default function reducer(posts = [], action) {
       return posts.filter((post) => post._id !== action.payload);
     }
     case "LIKE": {
-      console.log(action.payload);
       return posts.map((post) =>
         post._id === action.payload._id ? action.payload : post
       );
